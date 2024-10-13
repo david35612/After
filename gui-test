@@ -1,13 +1,13 @@
 -- This uses the Orion GUI Library - all docs can be found at https://github.com/shlexware/Orion/blob/main/Documentation.md
 
 local EnteredKey = nil
-local Key = loadstring(game:HttpGet("raw.githubusercontent.com/david35612/After/refs/heads/main/Keys?token=GHSAT0AAAAAACY3Y7HG4HZ3OI2MWYLQ2XZWZYLPQFQ"))() -- Enter the link to your pastebin here, replace everything in the speech marks ""
+local Key = loadstring(game:HttpGet("https://raw.githubusercontent.com/david35612/After/refs/heads/main/Keys?token=GHSAT0AAAAAACY3Y7HGV4N3AFERGMOUJH6SZYLPXFQ"))() -- Enter the link to your pastebin here, replace everything in the speech marks ""
 
 local function CheckKey()
     if EnteredKey then
         if EnteredKey == Key then 
             print("Correct Key Entered!")
-            loadstring(game:HttpGet("raw.githubusercontent.com/david35612/After/refs/heads/main/1?token=GHSAT0AAAAAACY3Y7HGBBEOOBINL5IQRG2KZYLPRDA"))() -- This will load the obfuscated code
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/david35612/After/refs/heads/main/1?token=GHSAT0AAAAAACY3Y7HGQPMSCGLYB4C6H4FOZYLPZEA"))() -- This will load the obfuscated code
         else
             warn("That was the wrong key!") -- User did not enter the correct key
         end
