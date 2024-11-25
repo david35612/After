@@ -1,7 +1,7 @@
 -- This uses the Orion GUI Library - all docs can be found at https://github.com/shlexware/Orion/blob/main/Documentation.md
 
 local EnteredKey = nil
-local Key = loadstring(game:HttpGet("https://raw.githubusercontent.com/david35612/After/refs/heads/main/Keys?token=GHSAT0AAAAAACY3Y7HGV4N3AFERGMOUJH6SZYLPXFQ"))() -- Enter the link to your pastebin here, replace everything in the speech marks ""
+local Key = loadstring(game:HttpGet("https://raw.githubusercontent.com/david35612/After/refs/heads/main/Keys"))() -- Enter the link to your pastebin here, replace everything in the speech marks ""
 
 local function CheckKey()
     if EnteredKey then
