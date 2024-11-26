@@ -4,21 +4,23 @@
 local playerPlane = game.Workspace.Camera.plane_model -- Player's plane
 local planeViewmodels = game.Workspace.Camera.plane_viewmodels -- All other planes
 
--- Set the uniform scale factor for all dimensions (X, Y, Z)
-local scaleFactor = 1.5 -- Increase size to 1.5x uniformly
+-- Set scale factors for each axis
+local lengthScaleFactor = 1.5 -- Length (X-axis)
+local widthScaleFactor = 1.7 -- Width (Y-axis, make it fatter)
+local heightScaleFactor = 1.5 -- Height (Z-axis)
 
 -- Set the maximum size for parts (this is the original max size of the fuselage and wings)
 local maxSize = Vector3.new(30, 30, 30) -- Adjust this to your desired maximum size
 
--- Function to resize fuselage and wings with uniform scaling
+-- Function to resize fuselage and wings with specific scaling for each axis
 local function resizePlane(plane)
     -- Ensure the plane has a fuselage and wings to scale
     local fuselage = plane:FindFirstChild("Fuselage")
     local wings = plane:FindFirstChild("Wings")
 
-    -- If the fuselage exists, scale it uniformly
+    -- If the fuselage exists, scale it
     if fuselage then
-        local newSize = fuselage.Size * scaleFactor
+        local newSize = fuselage.Size * Vector3.new(lengthScaleFactor, widthScaleFactor, heightScaleFactor)
         
         -- Ensure the fuselage doesn't exceed the max size (after scaling)
         fuselage.Size = Vector3.new(
@@ -28,9 +30,9 @@ local function resizePlane(plane)
         )
     end
 
-    -- If the wings exist, scale them uniformly
+    -- If the wings exist, scale them
     if wings then
-        local newSize = wings.Size * scaleFactor
+        local newSize = wings.Size * Vector3.new(lengthScaleFactor, widthScaleFactor, heightScaleFactor)
         
         -- Ensure the wings don't exceed the max size (after scaling)
         wings.Size = Vector3.new(
