@@ -4,9 +4,10 @@
 local playerPlane = game.Workspace.Camera.plane_model -- Player's plane
 local planeViewmodels = game.Workspace.Camera.plane_viewmodels -- All other planes
 
--- Set the scale factor for length, width, and height to 0.7 to make the planes smaller
-local lengthScaleFactor = 0.7
-local widthHeightScaleFactor = 0.7
+-- Set the scale factor for width and height to 1.2 (making them 1.2x bigger),
+-- but leave the length (X-axis) unchanged (scale factor = 1 for length).
+local lengthScaleFactor = 1 -- No change to the length (X-axis)
+local widthHeightScaleFactor = 1.2 -- Increase width (Y-axis) and height (Z-axis) by 1.2x
 
 -- Set the maximum size for parts (this is the original max size of the fuselage and wings)
 local maxSize = Vector3.new(30, 30, 30) -- Adjust this to your desired maximum size
